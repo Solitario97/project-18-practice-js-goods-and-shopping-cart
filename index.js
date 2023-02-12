@@ -167,7 +167,7 @@ function renderGoods() {
 
 		const price = product.price === null
 			? '<p>Товар закончился</p>'
-			: `<p class="price">₽ ${product.price}</p>`;
+			: `<p class="price">$ ${product.price}</p>`;
 
 		const productBlock = document.createElement('div');
 		productBlock.className = 'product-item';
@@ -211,7 +211,7 @@ function renderCart() {
 		cartItem.innerHTML = `
 			<div class="cart-item-title">${product.name}</div>
   			<div class="cart-item-count">${product.count} шт.</div>
-  			<div class="cart-item-price">₽ ${product.price}</div>
+  			<div class="cart-item-price">$ ${product.price}</div>
 		`;
 
 		const clickHander = removeInCartHandler(product.id);
