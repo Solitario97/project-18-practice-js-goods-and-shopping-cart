@@ -37,7 +37,7 @@ body {
 }
 
 .cart-tab::after {
-	content: '5';
+	content: attr(data-goods-count);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -116,11 +116,19 @@ body {
 
 .cart-item {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .cart-item-price {
 	font-weight: bold;
+}
+
+.cart-item-delete {
+	background: red;
+	color:  white;
+	border:  none;
+	border-radius: 5px;
+	width: 30px;
 }
 
 
